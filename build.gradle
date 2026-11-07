@@ -33,6 +33,10 @@ repositories {
         forRepository { maven { url = "https://cursemaven.com" } }
         filter { includeGroup "curse.maven" }
     }
+    maven {
+        name = 'De Maven'
+        url = 'https://modmaven.dev/'
+    }
 }
 
 sourceSets {
@@ -92,6 +96,7 @@ dependencies {
     implementation "curse.maven:applied-energistics-2-${ae2}"
     implementation "curse.maven:guideme-${guideme}"
     implementation "curse.maven:thaumaturge-${thaumaturge}"
+    implementation("de.mari_023:ae2wtlib:26.1.1-beta")
 
     localRuntime "curse.maven:lithostitched-${lithostitched}"
 
@@ -103,6 +108,8 @@ dependencies {
 
     compileOnly  "curse.maven:jade-${jade}"
     localRuntime "curse.maven:jade-${jade}"
+
+
 
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
     compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
